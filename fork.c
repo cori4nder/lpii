@@ -26,7 +26,7 @@ int main() {
         if (pid_original == getpid()) { // verifica se o pid id é o mesmo
             fork();
         } else {
-            wprintf(L"Meu pid: %d, meu ppid: %d\n");
+       
         }
     }
 
