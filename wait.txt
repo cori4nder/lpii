@@ -1,0 +1,34 @@
+Linguagem de Programação II - Programação Concorrente #30/02#
+
+*wait()
+*waitpid()
+*execve()
+
+------------------------------------
+|Parâmetro - waitpid(int, int, int)|
+------------------------------------
+|
+
+# 1º parâmetro #
+            waitpid(*int*, int, int)
+                   < -1 // aguarda todo o grupo.
+
+            waitpid(*int*, int, int)
+                   = -1 // aguarda todos os decendentes.
+
+            waitpid(*int*, int, int)
+                   = 0 // aguarda por decendentes do grupo.
+
+            waitpid(*int*, int, int)
+                    > 0 // considerar como PID.
+
+# 2º parâmetro #
+            waitpid(int, *int*, int)
+                status // ponteiro para int.
+
+# 3º parâmetro #
+            waitpid(int, int, *int*)
+               WNOHANG - retorna imediatamente se nenhum descendente foi finalizado.
+               WUNTRANCED - retorna se um descendente foi finalizado.
+               WCONTINNUED - retorna se um descendente que foi finalizado, resumiu-se pelo S.O.
+                
